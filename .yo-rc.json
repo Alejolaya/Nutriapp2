@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "gitCompany": "",
+    "baseName": "Nutriapp",
+    "packageName": "co.com.nutriapp",
+    "packageFolder": "co/com/nutriapp",
+    "serverPort": 8080,
+    "serviceDiscoveryType": false,
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "enableSwaggerCodegen": false,
+    "messageBroker": false,
+    "buildTool": "maven",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "enableTranslation": true,
+    "nativeLanguage": "es",
+    "languages": [
+      "en",
+      "es"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "6.1.2",
+    "jwtSecretKey": "NDI2NWI2ODFhM2Q3ODZkMjA4MzUzOGVlZTA4ZGZhNGM4MGVhNTY3YjIyOWQ4OGVmNThmNDk1YjE0YmRjZmFlMGQyZGMwYmIyZWQxY2Q5NTExNWEyYmUyMGU5MmZlOGZhMTVlOTljN2ZkZmM2YTg4ZjQ5YmMzZDliMTdjN2Y4NDk=",
+    "clientTheme": "none",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": []
+  },
+  "git-provider": "GitHub",
+  "git-company": "Alejolaya",
+  "repository-name": "Nutriapp2"
+}

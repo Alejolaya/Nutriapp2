@@ -14,6 +14,26 @@
     <property name="uuidType" value="varchar(36)" dbms="h2, mysql, mariadb"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190716235013_added_entity_Producto.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190716235014_added_entity_NutrientesAdicionales.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190716235015_added_entity_Tags.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190716235016_added_entity_UnidadMedida.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190716235017_added_entity_TipoUnidadMedida.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190716235018_added_entity_Marca.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190716235019_added_entity_Categoria.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190716235020_added_entity_SugerenciaProducto.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190716235021_added_entity_SugNutrientesAdicionales.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190716235022_added_entity_SugTags.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190716235023_added_entity_SugUnidadMedida.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190716235024_added_entity_SugTipoUnidadMedida.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190716235025_added_entity_SugMarca.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190716235026_added_entity_SugCategoria.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20190716235013_added_entity_constraints_Producto.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190716235014_added_entity_constraints_NutrientesAdicionales.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190716235016_added_entity_constraints_UnidadMedida.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190716235020_added_entity_constraints_SugerenciaProducto.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190716235021_added_entity_constraints_SugNutrientesAdicionales.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190716235023_added_entity_constraints_SugUnidadMedida.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

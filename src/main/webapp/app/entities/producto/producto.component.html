@@ -1,0 +1,143 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="nutriappApp.producto.home.title">Productos</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-producto" [routerLink]="['/producto/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="nutriappApp.producto.home.createLabel">
+            Create new Producto
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="productos?.length === 0">
+        <span jhiTranslate="nutriappApp.producto.home.notFound">No productos found</span>
+    </div>
+    <div class="table-responsive" *ngIf="productos?.length > 0">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="nombreAlimento"><span jhiTranslate="nutriappApp.producto.nombreAlimento">Nombre Alimento</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="tamanoPorcion"><span jhiTranslate="nutriappApp.producto.tamanoPorcion">Tamano Porcion</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="medidaCasera"><span jhiTranslate="nutriappApp.producto.medidaCasera">Medida Casera</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="valorEnergetico"><span jhiTranslate="nutriappApp.producto.valorEnergetico">Valor Energetico</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="caloriasGrasa"><span jhiTranslate="nutriappApp.producto.caloriasGrasa">Calorias Grasa</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="grasaTotal"><span jhiTranslate="nutriappApp.producto.grasaTotal">Grasa Total</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="grasaSaturada"><span jhiTranslate="nutriappApp.producto.grasaSaturada">Grasa Saturada</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="grasaInsaturada"><span jhiTranslate="nutriappApp.producto.grasaInsaturada">Grasa Insaturada</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="grasaTrans"><span jhiTranslate="nutriappApp.producto.grasaTrans">Grasa Trans</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="colesterol"><span jhiTranslate="nutriappApp.producto.colesterol">Colesterol</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="sodio"><span jhiTranslate="nutriappApp.producto.sodio">Sodio</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="carbohidrato"><span jhiTranslate="nutriappApp.producto.carbohidrato">Carbohidrato</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="fibraDietaria"><span jhiTranslate="nutriappApp.producto.fibraDietaria">Fibra Dietaria</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="fibraInsoluble"><span jhiTranslate="nutriappApp.producto.fibraInsoluble">Fibra Insoluble</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="fibraSoluble"><span jhiTranslate="nutriappApp.producto.fibraSoluble">Fibra Soluble</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="azucares"><span jhiTranslate="nutriappApp.producto.azucares">Azucares</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="proteina"><span jhiTranslate="nutriappApp.producto.proteina">Proteina</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="vitaminaA"><span jhiTranslate="nutriappApp.producto.vitaminaA">Vitamina A</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="vitaminaC"><span jhiTranslate="nutriappApp.producto.vitaminaC">Vitamina C</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="calcio"><span jhiTranslate="nutriappApp.producto.calcio">Calcio</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="hierro"><span jhiTranslate="nutriappApp.producto.hierro">Hierro</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="gluten"><span jhiTranslate="nutriappApp.producto.gluten">Gluten</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="azucar"><span jhiTranslate="nutriappApp.producto.azucar">Azucar</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="integral"><span jhiTranslate="nutriappApp.producto.integral">Integral</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="fechaCreacion"><span jhiTranslate="nutriappApp.producto.fechaCreacion">Fecha Creacion</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="fechaUltimaModificacion"><span jhiTranslate="nutriappApp.producto.fechaUltimaModificacion">Fecha Ultima Modificacion</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="estadoActivo"><span jhiTranslate="nutriappApp.producto.estadoActivo">Estado Activo</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="codigoDeBarras"><span jhiTranslate="nutriappApp.producto.codigoDeBarras">Codigo De Barras</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="unidadPorcion.abreviacion"><span jhiTranslate="nutriappApp.producto.unidadPorcion">Unidad Porcion</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="unidadMedidaCasera.abreviacion"><span jhiTranslate="nutriappApp.producto.unidadMedidaCasera">Unidad Medida Casera</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="marca.nombreMarca"><span jhiTranslate="nutriappApp.producto.marca">Marca</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="categoria.nombreCategoria"><span jhiTranslate="nutriappApp.producto.categoria">Categoria</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let producto of productos ;trackBy: trackId">
+                <td><a [routerLink]="['/producto', producto.id, 'view' ]">{{producto.id}}</a></td>
+                <td>{{producto.nombreAlimento}}</td>
+                <td>{{producto.tamanoPorcion}}</td>
+                <td>{{producto.medidaCasera}}</td>
+                <td>{{producto.valorEnergetico}}</td>
+                <td>{{producto.caloriasGrasa}}</td>
+                <td>{{producto.grasaTotal}}</td>
+                <td>{{producto.grasaSaturada}}</td>
+                <td>{{producto.grasaInsaturada}}</td>
+                <td>{{producto.grasaTrans}}</td>
+                <td>{{producto.colesterol}}</td>
+                <td>{{producto.sodio}}</td>
+                <td>{{producto.carbohidrato}}</td>
+                <td>{{producto.fibraDietaria}}</td>
+                <td>{{producto.fibraInsoluble}}</td>
+                <td>{{producto.fibraSoluble}}</td>
+                <td>{{producto.azucares}}</td>
+                <td>{{producto.proteina}}</td>
+                <td>{{producto.vitaminaA}}</td>
+                <td>{{producto.vitaminaC}}</td>
+                <td>{{producto.calcio}}</td>
+                <td>{{producto.hierro}}</td>
+                <td>{{producto.gluten}}</td>
+                <td>{{producto.azucar}}</td>
+                <td>{{producto.integral}}</td>
+                <td>{{producto.fechaCreacion | date:'medium'}}</td>
+                <td>{{producto.fechaUltimaModificacion | date:'medium'}}</td>
+                <td>{{producto.estadoActivo}}</td>
+                <td>{{producto.codigoDeBarras}}</td>
+                <td>
+                    <div *ngIf="producto.unidadPorcion">
+                        <a [routerLink]="['../unidad-medida', producto.unidadPorcion?.id, 'view' ]" >{{producto.unidadPorcion?.abreviacion}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="producto.unidadMedidaCasera">
+                        <a [routerLink]="['../unidad-medida', producto.unidadMedidaCasera?.id, 'view' ]" >{{producto.unidadMedidaCasera?.abreviacion}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="producto.marca">
+                        <a [routerLink]="['../marca', producto.marca?.id, 'view' ]" >{{producto.marca?.nombreMarca}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="producto.categoria">
+                        <a [routerLink]="['../categoria', producto.categoria?.id, 'view' ]" >{{producto.categoria?.nombreCategoria}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/producto', producto.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/producto', producto.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'producto', { outlets: { popup: producto.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div [hidden]="productos?.length === 0">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

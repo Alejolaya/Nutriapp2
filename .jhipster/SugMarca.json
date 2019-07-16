@@ -1,0 +1,19 @@
+{
+    "name": "SugMarca",
+    "fields": [
+        {
+            "fieldName": "nombreMarca",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190716235025",
+    "entityTableName": "sug_marca",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

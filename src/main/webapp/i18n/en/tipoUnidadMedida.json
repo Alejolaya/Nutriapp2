@@ -1,0 +1,22 @@
+{
+  "nutriappApp": {
+    "tipoUnidadMedida": {
+      "home": {
+        "title": "Tipo Unidad Medidas",
+        "createLabel": "Create a new Tipo Unidad Medida",
+        "createOrEditLabel": "Create or edit a Tipo Unidad Medida",
+        "notFound": "No Tipo Unidad Medida found"
+      },
+      "created": "A new Tipo Unidad Medida is created with identifier {{ param }}",
+      "updated": "A Tipo Unidad Medida is updated with identifier {{ param }}",
+      "deleted": "A Tipo Unidad Medida is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tipo Unidad Medida {{ id }}?"
+      },
+      "detail": {
+        "title": "Tipo Unidad Medida"
+      },
+      "nombre": "Nombre"
+    }
+  }
+}

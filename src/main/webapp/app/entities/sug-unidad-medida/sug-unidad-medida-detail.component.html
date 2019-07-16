@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="sugUnidadMedida">
+            <h2><span jhiTranslate="nutriappApp.sugUnidadMedida.detail.title">Sug Unidad Medida</span> {{sugUnidadMedida.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="nutriappApp.sugUnidadMedida.abreviacion">Abreviacion</span></dt>
+                <dd>
+                    <span>{{sugUnidadMedida.abreviacion}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugUnidadMedida.descripcion">Descripcion</span></dt>
+                <dd>
+                    <span>{{sugUnidadMedida.descripcion}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugUnidadMedida.valorConversion">Valor Conversion</span></dt>
+                <dd>
+                    <span>{{sugUnidadMedida.valorConversion}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugUnidadMedida.unidadBase">Unidad Base</span></dt>
+                <dd>
+                    <div *ngIf="sugUnidadMedida.unidadBase">
+                        <a [routerLink]="['/sug-tipo-unidad-medida', sugUnidadMedida.unidadBase?.id, 'view']">{{sugUnidadMedida.unidadBase?.nombre}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/sug-unidad-medida', sugUnidadMedida.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

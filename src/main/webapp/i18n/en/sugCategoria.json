@@ -1,0 +1,23 @@
+{
+  "nutriappApp": {
+    "sugCategoria": {
+      "home": {
+        "title": "Sug Categorias",
+        "createLabel": "Create a new Sug Categoria",
+        "createOrEditLabel": "Create or edit a Sug Categoria",
+        "notFound": "No Sug Categoria found"
+      },
+      "created": "A new Sug Categoria is created with identifier {{ param }}",
+      "updated": "A Sug Categoria is updated with identifier {{ param }}",
+      "deleted": "A Sug Categoria is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Sug Categoria {{ id }}?"
+      },
+      "detail": {
+        "title": "Sug Categoria"
+      },
+      "nombreCategoria": "Nombre Categoria",
+      "descripcion": "Descripcion"
+    }
+  }
+}

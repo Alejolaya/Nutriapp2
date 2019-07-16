@@ -1,0 +1,25 @@
+{
+  "nutriappApp": {
+    "sugUnidadMedida": {
+      "home": {
+        "title": "Sug Unidad Medidas",
+        "createLabel": "Crear nuevo Sug Unidad Medida",
+        "createOrEditLabel": "Crear o editar Sug Unidad Medida",
+        "notFound": "No Sug Unidad Medida found"
+      },
+      "created": "Un nuevo Sug Unidad Medida ha sido creado con el identificador {{ param }}",
+      "updated": "Un Sug Unidad Medida ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Sug Unidad Medida ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Sug Unidad Medida {{ id }}?"
+      },
+      "detail": {
+        "title": "Sug Unidad Medida"
+      },
+      "abreviacion": "Abreviacion",
+      "descripcion": "Descripcion",
+      "valorConversion": "Valor Conversion",
+      "unidadBase": "Unidad Base"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "nutriappApp": {
+    "sugerenciaProducto": {
+      "home": {
+        "title": "Sugerencia Productos",
+        "createLabel": "Create a new Sugerencia Producto",
+        "createOrEditLabel": "Create or edit a Sugerencia Producto",
+        "notFound": "No Sugerencia Producto found"
+      },
+      "created": "A new Sugerencia Producto is created with identifier {{ param }}",
+      "updated": "A Sugerencia Producto is updated with identifier {{ param }}",
+      "deleted": "A Sugerencia Producto is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Sugerencia Producto {{ id }}?"
+      },
+      "detail": {
+        "title": "Sugerencia Producto"
+      },
+      "nombreAlimento": "Nombre Alimento",
+      "tamanoPorcion": "Tamano Porcion",
+      "medidaCasera": "Medida Casera",
+      "valorEnergetico": "Valor Energetico",
+      "caloriasGrasa": "Calorias Grasa",
+      "grasaTotal": "Grasa Total",
+      "grasaSaturada": "Grasa Saturada",
+      "grasaInsaturada": "Grasa Insaturada",
+      "grasaTrans": "Grasa Trans",
+      "colesterol": "Colesterol",
+      "sodio": "Sodio",
+      "carbohidrato": "Carbohidrato",
+      "fibraDietaria": "Fibra Dietaria",
+      "fibraInsoluble": "Fibra Insoluble",
+      "fibraSoluble": "Fibra Soluble",
+      "azucares": "Azucares",
+      "proteina": "Proteina",
+      "vitaminaA": "Vitamina A",
+      "vitaminaC": "Vitamina C",
+      "calcio": "Calcio",
+      "hierro": "Hierro",
+      "gluten": "Gluten",
+      "azucar": "Azucar",
+      "integral": "Integral",
+      "fechaCreacion": "Fecha Creacion",
+      "fechaUltimaModificacion": "Fecha Ultima Modificacion",
+      "estadoActivo": "Estado Activo",
+      "codigoDeBarras": "Codigo De Barras",
+      "imagen": "Imagen",
+      "observaciones": "Observaciones",
+      "estadoSugerencia": "Estado Sugerencia",
+      "unidadPorcion": "Unidad Porcion",
+      "unidadMedidaCasera": "Unidad Medida Casera",
+      "marca": "Marca",
+      "categoria": "Categoria",
+      "tags": "Tags",
+      "nutrientesAdicionales": "Nutrientes Adicionales"
+    }
+  }
+}

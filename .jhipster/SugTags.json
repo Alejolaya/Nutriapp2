@@ -1,0 +1,28 @@
+{
+    "name": "SugTags",
+    "fields": [
+        {
+            "fieldName": "descripcion",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "sugerenciaProducto",
+            "otherEntityRelationshipName": "tags",
+            "relationshipName": "sugerenciaProducto",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20190716235022",
+    "entityTableName": "sug_tags",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,153 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="nutriappApp.sugerenciaProducto.home.title">Sugerencia Productos</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-sugerencia-producto" [routerLink]="['/sugerencia-producto/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="nutriappApp.sugerenciaProducto.home.createLabel">
+            Create new Sugerencia Producto
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="sugerenciaProductos?.length === 0">
+        <span jhiTranslate="nutriappApp.sugerenciaProducto.home.notFound">No sugerenciaProductos found</span>
+    </div>
+    <div class="table-responsive" *ngIf="sugerenciaProductos?.length > 0">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.nombreAlimento">Nombre Alimento</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.tamanoPorcion">Tamano Porcion</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.medidaCasera">Medida Casera</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.valorEnergetico">Valor Energetico</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.caloriasGrasa">Calorias Grasa</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.grasaTotal">Grasa Total</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.grasaSaturada">Grasa Saturada</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.grasaInsaturada">Grasa Insaturada</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.grasaTrans">Grasa Trans</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.colesterol">Colesterol</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.sodio">Sodio</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.carbohidrato">Carbohidrato</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.fibraDietaria">Fibra Dietaria</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.fibraInsoluble">Fibra Insoluble</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.fibraSoluble">Fibra Soluble</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.azucares">Azucares</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.proteina">Proteina</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.vitaminaA">Vitamina A</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.vitaminaC">Vitamina C</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.calcio">Calcio</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.hierro">Hierro</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.gluten">Gluten</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.azucar">Azucar</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.integral">Integral</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.fechaCreacion">Fecha Creacion</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.fechaUltimaModificacion">Fecha Ultima Modificacion</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.estadoActivo">Estado Activo</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.codigoDeBarras">Codigo De Barras</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.imagen">Imagen</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.observaciones">Observaciones</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.estadoSugerencia">Estado Sugerencia</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.unidadPorcion">Unidad Porcion</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.unidadMedidaCasera">Unidad Medida Casera</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.marca">Marca</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.categoria">Categoria</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.tags">Tags</span></th>
+            <th><span jhiTranslate="nutriappApp.sugerenciaProducto.nutrientesAdicionales">Nutrientes Adicionales</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let sugerenciaProducto of sugerenciaProductos ;trackBy: trackId">
+                <td><a [routerLink]="['/sugerencia-producto', sugerenciaProducto.id, 'view' ]">{{sugerenciaProducto.id}}</a></td>
+                <td>{{sugerenciaProducto.nombreAlimento}}</td>
+                <td>{{sugerenciaProducto.tamanoPorcion}}</td>
+                <td>{{sugerenciaProducto.medidaCasera}}</td>
+                <td>{{sugerenciaProducto.valorEnergetico}}</td>
+                <td>{{sugerenciaProducto.caloriasGrasa}}</td>
+                <td>{{sugerenciaProducto.grasaTotal}}</td>
+                <td>{{sugerenciaProducto.grasaSaturada}}</td>
+                <td>{{sugerenciaProducto.grasaInsaturada}}</td>
+                <td>{{sugerenciaProducto.grasaTrans}}</td>
+                <td>{{sugerenciaProducto.colesterol}}</td>
+                <td>{{sugerenciaProducto.sodio}}</td>
+                <td>{{sugerenciaProducto.carbohidrato}}</td>
+                <td>{{sugerenciaProducto.fibraDietaria}}</td>
+                <td>{{sugerenciaProducto.fibraInsoluble}}</td>
+                <td>{{sugerenciaProducto.fibraSoluble}}</td>
+                <td>{{sugerenciaProducto.azucares}}</td>
+                <td>{{sugerenciaProducto.proteina}}</td>
+                <td>{{sugerenciaProducto.vitaminaA}}</td>
+                <td>{{sugerenciaProducto.vitaminaC}}</td>
+                <td>{{sugerenciaProducto.calcio}}</td>
+                <td>{{sugerenciaProducto.hierro}}</td>
+                <td>{{sugerenciaProducto.gluten}}</td>
+                <td>{{sugerenciaProducto.azucar}}</td>
+                <td>{{sugerenciaProducto.integral}}</td>
+                <td>{{sugerenciaProducto.fechaCreacion | date:'medium'}}</td>
+                <td>{{sugerenciaProducto.fechaUltimaModificacion | date:'medium'}}</td>
+                <td>{{sugerenciaProducto.estadoActivo}}</td>
+                <td>{{sugerenciaProducto.codigoDeBarras}}</td>
+                <td>{{sugerenciaProducto.imagen}}</td>
+                <td>{{sugerenciaProducto.observaciones}}</td>
+                <td jhiTranslate="{{'nutriappApp.EstadoSugerencia.' + sugerenciaProducto.estadoSugerencia}}">{{sugerenciaProducto.estadoSugerencia}}</td>
+                <td>
+                    <div *ngIf="sugerenciaProducto.unidadPorcion">
+                        <a [routerLink]="['../sug-unidad-medida', sugerenciaProducto.unidadPorcion?.id, 'view' ]" >{{sugerenciaProducto.unidadPorcion?.abreviacion}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="sugerenciaProducto.unidadMedidaCasera">
+                        <a [routerLink]="['../sug-unidad-medida', sugerenciaProducto.unidadMedidaCasera?.id, 'view' ]" >{{sugerenciaProducto.unidadMedidaCasera?.abreviacion}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="sugerenciaProducto.marca">
+                        <a [routerLink]="['../sug-marca', sugerenciaProducto.marca?.id, 'view' ]" >{{sugerenciaProducto.marca?.nombreMarca}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="sugerenciaProducto.categoria">
+                        <a [routerLink]="['../sug-categoria', sugerenciaProducto.categoria?.id, 'view' ]" >{{sugerenciaProducto.categoria?.nombreCategoria}}</a>
+                    </div>
+                </td>
+                <td>
+                    <span *ngFor="let tags of sugerenciaProducto.tags; let last = last">
+                            <a class="form-control-static" [routerLink]="['../sug-tags', tags?.id, 'view' ]">{{tags.descripcion}}</a>{{last ? '' : ', '}}
+                        </span>
+                </td>
+                <td>
+                    <span *ngFor="let nutrientesAdicionales of sugerenciaProducto.nutrientesAdicionales; let last = last">
+                            <a class="form-control-static" [routerLink]="['../sug-nutrientes-adicionales', nutrientesAdicionales?.id, 'view' ]">{{nutrientesAdicionales.descripcion}}</a>{{last ? '' : ', '}}
+                        </span>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/sugerencia-producto', sugerenciaProducto.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/sugerencia-producto', sugerenciaProducto.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'sugerencia-producto', { outlets: { popup: sugerenciaProducto.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

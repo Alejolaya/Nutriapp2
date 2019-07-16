@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity SugerenciaProducto.
+    -->
+    <changeSet id="20190716235020-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="unidad_porcion_id"
+                                 baseTableName="sugerencia_producto"
+                                 constraintName="fk_sugerencia_producto_unidad_porcion_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="sug_unidad_medida"/>
+
+        <addForeignKeyConstraint baseColumnNames="unidad_medida_casera_id"
+                                 baseTableName="sugerencia_producto"
+                                 constraintName="fk_sugerencia_producto_unidad_medida_casera_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="sug_unidad_medida"/>
+
+        <addForeignKeyConstraint baseColumnNames="marca_id"
+                                 baseTableName="sugerencia_producto"
+                                 constraintName="fk_sugerencia_producto_marca_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="sug_marca"/>
+
+        <addForeignKeyConstraint baseColumnNames="categoria_id"
+                                 baseTableName="sugerencia_producto"
+                                 constraintName="fk_sugerencia_producto_categoria_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="sug_categoria"/>
+
+        <addForeignKeyConstraint baseColumnNames="sugerencia_producto_id"
+                                 baseTableName="sugerencia_producto_tags"
+                                 constraintName="fk_sugerencia_producto_tags_sugerencia_producto_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="sugerencia_producto"/>
+
+        <addForeignKeyConstraint baseColumnNames="tags_id"
+                                 baseTableName="sugerencia_producto_tags"
+                                 constraintName="fk_sugerencia_producto_tags_tags_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="sug_tags"/>
+        
+        <addForeignKeyConstraint baseColumnNames="sugerencia_producto_id"
+                                 baseTableName="sugerencia_producto_nutrientes_adicionales"
+                                 constraintName="sugerencia_producto_nutrientes__sugerencia_producto_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="sugerencia_producto"/>
+
+        <addForeignKeyConstraint baseColumnNames="nutrientes_adicionales_id"
+                                 baseTableName="sugerencia_producto_nutrientes_adicionales"
+                                 constraintName="sugerencia_producto_nutrientes__nutrientes_adicionales_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="sug_nutrientes_adicionales"/>
+        
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,23 @@
+{
+  "nutriappApp": {
+    "tags": {
+      "home": {
+        "title": "Tags",
+        "createLabel": "Crear nuevo Tags",
+        "createOrEditLabel": "Crear o editar Tags",
+        "notFound": "No Tags found"
+      },
+      "created": "Un nuevo Tags ha sido creado con el identificador {{ param }}",
+      "updated": "Un Tags ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Tags ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Tags {{ id }}?"
+      },
+      "detail": {
+        "title": "Tags"
+      },
+      "descripcion": "Descripcion",
+      "producto": "Producto"
+    }
+  }
+}

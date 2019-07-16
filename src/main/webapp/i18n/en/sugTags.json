@@ -1,0 +1,23 @@
+{
+  "nutriappApp": {
+    "sugTags": {
+      "home": {
+        "title": "Sug Tags",
+        "createLabel": "Create a new Sug Tags",
+        "createOrEditLabel": "Create or edit a Sug Tags",
+        "notFound": "No Sug Tags found"
+      },
+      "created": "A new Sug Tags is created with identifier {{ param }}",
+      "updated": "A Sug Tags is updated with identifier {{ param }}",
+      "deleted": "A Sug Tags is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Sug Tags {{ id }}?"
+      },
+      "detail": {
+        "title": "Sug Tags"
+      },
+      "descripcion": "Descripcion",
+      "sugerenciaProducto": "Sugerencia Producto"
+    }
+  }
+}

@@ -1,0 +1,172 @@
+{
+    "name": "Producto",
+    "fields": [
+        {
+            "fieldName": "nombreAlimento",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tamanoPorcion",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "medidaCasera",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "valorEnergetico",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "caloriasGrasa",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "grasaTotal",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "grasaSaturada",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "grasaInsaturada",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "grasaTrans",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "colesterol",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "sodio",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "carbohidrato",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "fibraDietaria",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "fibraInsoluble",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "fibraSoluble",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "azucares",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "proteina",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "vitaminaA",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "vitaminaC",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "calcio",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "hierro",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "gluten",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "azucar",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "integral",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "fechaCreacion",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "fechaUltimaModificacion",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "estadoActivo",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "codigoDeBarras",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "unidadMedida",
+            "otherEntityRelationshipName": "producto",
+            "relationshipName": "unidadPorcion",
+            "otherEntityField": "abreviacion"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "unidadMedida",
+            "otherEntityRelationshipName": "producto",
+            "relationshipName": "unidadMedidaCasera",
+            "otherEntityField": "abreviacion"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "marca",
+            "otherEntityRelationshipName": "producto",
+            "relationshipName": "marca",
+            "otherEntityField": "nombreMarca"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "categoria",
+            "otherEntityRelationshipName": "producto",
+            "relationshipName": "categoria",
+            "otherEntityField": "nombreCategoria"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "tags",
+            "otherEntityRelationshipName": "producto",
+            "relationshipName": "tags",
+            "otherEntityField": "descripcion",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "nutrientesAdicionales",
+            "otherEntityRelationshipName": "producto",
+            "relationshipName": "nutrientesAdicionales",
+            "otherEntityField": "descripcion",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190716235013",
+    "entityTableName": "producto",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

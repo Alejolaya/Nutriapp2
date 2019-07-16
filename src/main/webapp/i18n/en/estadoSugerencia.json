@@ -1,0 +1,10 @@
+{
+  "nutriappApp": {
+    "EstadoSugerencia": {
+      "null": "",
+      "APROBADO": "APROBADO",
+      "RECHAZADO": "RECHAZADO",
+      "VALIDANDO": "VALIDANDO"
+    }
+  }
+}

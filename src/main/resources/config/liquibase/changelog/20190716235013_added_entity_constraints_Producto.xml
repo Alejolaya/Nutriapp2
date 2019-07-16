@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Producto.
+    -->
+    <changeSet id="20190716235013-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="unidad_porcion_id"
+                                 baseTableName="producto"
+                                 constraintName="fk_producto_unidad_porcion_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="unidad_medida"/>
+
+        <addForeignKeyConstraint baseColumnNames="unidad_medida_casera_id"
+                                 baseTableName="producto"
+                                 constraintName="fk_producto_unidad_medida_casera_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="unidad_medida"/>
+
+        <addForeignKeyConstraint baseColumnNames="marca_id"
+                                 baseTableName="producto"
+                                 constraintName="fk_producto_marca_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="marca"/>
+
+        <addForeignKeyConstraint baseColumnNames="categoria_id"
+                                 baseTableName="producto"
+                                 constraintName="fk_producto_categoria_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="categoria"/>
+
+        <addForeignKeyConstraint baseColumnNames="producto_id"
+                                 baseTableName="producto_tags"
+                                 constraintName="fk_producto_tags_producto_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="producto"/>
+
+        <addForeignKeyConstraint baseColumnNames="tags_id"
+                                 baseTableName="producto_tags"
+                                 constraintName="fk_producto_tags_tags_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tags"/>
+        
+        <addForeignKeyConstraint baseColumnNames="producto_id"
+                                 baseTableName="producto_nutrientes_adicionales"
+                                 constraintName="fk_producto_nutrientes_adicionales_producto_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="producto"/>
+
+        <addForeignKeyConstraint baseColumnNames="nutrientes_adicionales_id"
+                                 baseTableName="producto_nutrientes_adicionales"
+                                 constraintName="fk_producto_nutrientes_adicionales_nutrientes_adicionales_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="nutrientes_adicionales"/>
+        
+    </changeSet>
+</databaseChangeLog>

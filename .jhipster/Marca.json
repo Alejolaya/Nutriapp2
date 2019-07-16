@@ -1,0 +1,19 @@
+{
+    "name": "Marca",
+    "fields": [
+        {
+            "fieldName": "nombreMarca",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190716235018",
+    "entityTableName": "marca",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

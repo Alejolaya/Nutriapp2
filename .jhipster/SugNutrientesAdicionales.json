@@ -1,0 +1,39 @@
+{
+    "name": "SugNutrientesAdicionales",
+    "fields": [
+        {
+            "fieldName": "descripcion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "valor",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "sugUnidadMedida",
+            "otherEntityRelationshipName": "sugNutrientesAdicionales",
+            "relationshipName": "unidadPorcion",
+            "otherEntityField": "abreviacion"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "sugerenciaProducto",
+            "otherEntityRelationshipName": "nutrientesAdicionales",
+            "relationshipName": "sugerenciaProducto",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20190716235021",
+    "entityTableName": "sug_nutrientes_adicionales",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

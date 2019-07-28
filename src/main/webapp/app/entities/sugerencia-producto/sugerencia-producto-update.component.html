@@ -1,0 +1,219 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-sugerencia-producto-heading" jhiTranslate="nutriappApp.sugerenciaProducto.home.createOrEditLabel">Create or edit a Sugerencia Producto</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.nombreAlimento" for="field_nombreAlimento">Nombre Alimento</label>
+                    <input type="text" class="form-control" name="nombreAlimento" id="field_nombreAlimento"
+                           formControlName="nombreAlimento"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.tamanoPorcion" for="field_tamanoPorcion">Tamano Porcion</label>
+                    <input type="number" class="form-control" name="tamanoPorcion" id="field_tamanoPorcion"
+                           formControlName="tamanoPorcion"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.medidaCasera" for="field_medidaCasera">Medida Casera</label>
+                    <input type="number" class="form-control" name="medidaCasera" id="field_medidaCasera"
+                           formControlName="medidaCasera"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.valorEnergetico" for="field_valorEnergetico">Valor Energetico</label>
+                    <input type="number" class="form-control" name="valorEnergetico" id="field_valorEnergetico"
+                           formControlName="valorEnergetico"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.caloriasGrasa" for="field_caloriasGrasa">Calorias Grasa</label>
+                    <input type="number" class="form-control" name="caloriasGrasa" id="field_caloriasGrasa"
+                           formControlName="caloriasGrasa"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.grasaTotal" for="field_grasaTotal">Grasa Total</label>
+                    <input type="number" class="form-control" name="grasaTotal" id="field_grasaTotal"
+                           formControlName="grasaTotal"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.grasaSaturada" for="field_grasaSaturada">Grasa Saturada</label>
+                    <input type="number" class="form-control" name="grasaSaturada" id="field_grasaSaturada"
+                           formControlName="grasaSaturada"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.grasaInsaturada" for="field_grasaInsaturada">Grasa Insaturada</label>
+                    <input type="number" class="form-control" name="grasaInsaturada" id="field_grasaInsaturada"
+                           formControlName="grasaInsaturada"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.grasaTrans" for="field_grasaTrans">Grasa Trans</label>
+                    <input type="number" class="form-control" name="grasaTrans" id="field_grasaTrans"
+                           formControlName="grasaTrans"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.colesterol" for="field_colesterol">Colesterol</label>
+                    <input type="number" class="form-control" name="colesterol" id="field_colesterol"
+                           formControlName="colesterol"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.sodio" for="field_sodio">Sodio</label>
+                    <input type="number" class="form-control" name="sodio" id="field_sodio"
+                           formControlName="sodio"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.carbohidrato" for="field_carbohidrato">Carbohidrato</label>
+                    <input type="number" class="form-control" name="carbohidrato" id="field_carbohidrato"
+                           formControlName="carbohidrato"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.fibraDietaria" for="field_fibraDietaria">Fibra Dietaria</label>
+                    <input type="number" class="form-control" name="fibraDietaria" id="field_fibraDietaria"
+                           formControlName="fibraDietaria"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.fibraInsoluble" for="field_fibraInsoluble">Fibra Insoluble</label>
+                    <input type="number" class="form-control" name="fibraInsoluble" id="field_fibraInsoluble"
+                           formControlName="fibraInsoluble"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.fibraSoluble" for="field_fibraSoluble">Fibra Soluble</label>
+                    <input type="number" class="form-control" name="fibraSoluble" id="field_fibraSoluble"
+                           formControlName="fibraSoluble"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.azucares" for="field_azucares">Azucares</label>
+                    <input type="number" class="form-control" name="azucares" id="field_azucares"
+                           formControlName="azucares"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.proteina" for="field_proteina">Proteina</label>
+                    <input type="number" class="form-control" name="proteina" id="field_proteina"
+                           formControlName="proteina"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.vitaminaA" for="field_vitaminaA">Vitamina A</label>
+                    <input type="number" class="form-control" name="vitaminaA" id="field_vitaminaA"
+                           formControlName="vitaminaA"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.vitaminaC" for="field_vitaminaC">Vitamina C</label>
+                    <input type="number" class="form-control" name="vitaminaC" id="field_vitaminaC"
+                           formControlName="vitaminaC"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.calcio" for="field_calcio">Calcio</label>
+                    <input type="number" class="form-control" name="calcio" id="field_calcio"
+                           formControlName="calcio"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.hierro" for="field_hierro">Hierro</label>
+                    <input type="number" class="form-control" name="hierro" id="field_hierro"
+                           formControlName="hierro"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.gluten" for="field_gluten">Gluten</label>
+                    <input type="checkbox" class="form-control" name="gluten" id="field_gluten"
+                           formControlName="gluten"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.azucar" for="field_azucar">Azucar</label>
+                    <input type="checkbox" class="form-control" name="azucar" id="field_azucar"
+                           formControlName="azucar"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.integral" for="field_integral">Integral</label>
+                    <input type="checkbox" class="form-control" name="integral" id="field_integral"
+                           formControlName="integral"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.fechaCreacion" for="field_fechaCreacion">Fecha Creacion</label>
+                    <div class="d-flex">
+                        <input id="field_fechaCreacion" type="datetime-local" class="form-control" name="fechaCreacion" formControlName="fechaCreacion" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.fechaUltimaModificacion" for="field_fechaUltimaModificacion">Fecha Ultima Modificacion</label>
+                    <div class="d-flex">
+                        <input id="field_fechaUltimaModificacion" type="datetime-local" class="form-control" name="fechaUltimaModificacion" formControlName="fechaUltimaModificacion" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.estadoActivo" for="field_estadoActivo">Estado Activo</label>
+                    <input type="checkbox" class="form-control" name="estadoActivo" id="field_estadoActivo"
+                           formControlName="estadoActivo"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.codigoDeBarras" for="field_codigoDeBarras">Codigo De Barras</label>
+                    <input type="text" class="form-control" name="codigoDeBarras" id="field_codigoDeBarras"
+                           formControlName="codigoDeBarras"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.imagen" for="field_imagen">Imagen</label>
+                    <input type="text" class="form-control" name="imagen" id="field_imagen"
+                           formControlName="imagen"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.observaciones" for="field_observaciones">Observaciones</label>
+                    <input type="text" class="form-control" name="observaciones" id="field_observaciones"
+                           formControlName="observaciones"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.estadoSugerencia" for="field_estadoSugerencia">Estado Sugerencia</label>
+                    <select class="form-control" name="estadoSugerencia" formControlName="estadoSugerencia" id="field_estadoSugerencia">
+                        <option value="APROBADO">{{'nutriappApp.EstadoSugerencia.APROBADO' | translate}}</option>
+                        <option value="RECHAZADO">{{'nutriappApp.EstadoSugerencia.RECHAZADO' | translate}}</option>
+                        <option value="VALIDANDO">{{'nutriappApp.EstadoSugerencia.VALIDANDO' | translate}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.tags" for="field_tags">Tags</label>
+                    <input type="text" class="form-control" name="tags" id="field_tags"
+                           formControlName="tags"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.nombreMarca" for="field_nombreMarca">Nombre Marca</label>
+                    <input type="text" class="form-control" name="nombreMarca" id="field_nombreMarca"
+                           formControlName="nombreMarca"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.nombreCategoria" for="field_nombreCategoria">Nombre Categoria</label>
+                    <input type="text" class="form-control" name="nombreCategoria" id="field_nombreCategoria"
+                           formControlName="nombreCategoria"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.descCategoria" for="field_descCategoria">Desc Categoria</label>
+                    <input type="text" class="form-control" name="descCategoria" id="field_descCategoria"
+                           formControlName="descCategoria"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.nutrientesAdicionales" for="field_nutrientesAdicionales">Nutrientes Adicionales</label>
+                    <input type="text" class="form-control" name="nutrientesAdicionales" id="field_nutrientesAdicionales"
+                           formControlName="nutrientesAdicionales"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.descUnidadMedida" for="field_descUnidadMedida">Desc Unidad Medida</label>
+                    <input type="text" class="form-control" name="descUnidadMedida" id="field_descUnidadMedida"
+                           formControlName="descUnidadMedida"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nutriappApp.sugerenciaProducto.valorUnidadMedida" for="field_valorUnidadMedida">Valor Unidad Medida</label>
+                    <input type="number" class="form-control" name="valorUnidadMedida" id="field_valorUnidadMedida"
+                           formControlName="valorUnidadMedida"/>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

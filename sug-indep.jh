@@ -1,0 +1,145 @@
+entity Producto {
+	nombreAlimento String
+  //  marca String
+    tamanoPorcion Float
+ //   unidadPorcion String
+    medidaCasera Float
+ //   unidadMedidaCasera String
+    valorEnergetico Float
+    caloriasGrasa Float
+    grasaTotal Float
+    grasaSaturada Float
+    grasaInsaturada Float
+    grasaTrans Float
+    colesterol Float
+    sodio Float
+    carbohidrato Float
+    fibraDietaria Float
+    fibraInsoluble Float
+    fibraSoluble Float
+    azucares Float
+    proteina Float
+    vitaminaA Float
+    vitaminaC Float
+    calcio Float
+    hierro Float
+//  categoria String
+    gluten Boolean
+    azucar Boolean
+    integral Boolean
+    fechaCreacion Instant
+    fechaUltimaModificacion Instant 
+    estadoActivo Boolean
+    codigoDeBarras String
+    
+}
+entity NutrientesAdicionales{
+	descripcion String
+    valor String
+}
+
+entity Tags{
+	descripcion String
+}
+entity UnidadMedida{
+	abreviacion String
+    descripcion String
+    valorConversion Float//factor multiplicador para convertir a la unidad base
+}
+
+entity TipoUnidadMedida{
+	nombre String //Unidad comun eje: Liquido, peso, distancia, otro
+}
+
+entity Marca{
+	nombreMarca String
+}
+
+entity Categoria{
+	nombreCategoria String
+    descripcion String    
+}
+entity SugerenciaProducto {
+	nombreAlimento String
+  //  marca String
+    tamanoPorcion Float
+ //   unidadPorcion String
+    medidaCasera Float
+ //   unidadMedidaCasera String
+    valorEnergetico Float
+    caloriasGrasa Float
+    grasaTotal Float
+    grasaSaturada Float
+    grasaInsaturada Float
+    grasaTrans Float
+    colesterol Float
+    sodio Float
+    carbohidrato Float
+    fibraDietaria Float
+    fibraInsoluble Float
+    fibraSoluble Float
+    azucares Float
+    proteina Float
+    vitaminaA Float
+    vitaminaC Float
+    calcio Float
+    hierro Float
+//  categoria String
+    gluten Boolean
+    azucar Boolean
+    integral Boolean
+    fechaCreacion Instant
+    fechaUltimaModificacion Instant 
+    estadoActivo Boolean
+    codigoDeBarras String
+    imagen String
+    observaciones String
+    estadoSugerencia EstadoSugerencia
+    tags String
+    nombreMarca String
+    nombreCategoria String
+    descCategoria String
+    nutrientesAdicionales String
+    descUnidadMedida String
+    valorUnidadMedida Float
+}
+
+enum EstadoSugerencia {
+	APROBADO, RECHAZADO, VALIDANDO
+}
+relationship ManyToOne{
+UnidadMedida{unidadBase(nombre)} to TipoUnidadMedida
+}
+relationship ManyToOne{
+NutrientesAdicionales{unidadPorcion(abreviacion)} to UnidadMedida
+}
+relationship ManyToOne{
+Producto{unidadPorcion(abreviacion)} to UnidadMedida,
+Producto{unidadMedidaCasera(abreviacion)} to UnidadMedida,
+Producto{marca(nombreMarca)} to Marca,
+Producto{categoria(nombreCategoria)} to Categoria
+}
+
+relationship ManyToMany{
+Producto{tags(descripcion)} to Tags{producto}
+Producto{nutrientesAdicionales(descripcion)} to NutrientesAdicionales{producto}
+}
+paginate Producto with pagination
+//relationship ManyToOne{
+//SugUnidadMedida{unidadBase(nombre)} to SugTipoUnidadMedida
+//}
+//relationship ManyToOne{
+//SugNutrientesAdicionales{unidadPorcion(abreviacion)} to SugUnidadMedida
+//}
+//relationship ManyToOne{
+//SugerenciaProducto{unidadPorcion(abreviacion)} to SugUnidadMedida,
+//SugerenciaProducto{unidadMedidaCasera(abreviacion)} to SugUnidadMedida
+//SugerenciaProducto{marca(nombreMarca)} to SugMarca,
+//SugerenciaProducto{categoria(nombreCategoria)} to SugCategoria
+//}
+
+//relationship ManyToMany{
+//SugerenciaProducto{tags(descripcion)} to SugTags{sugerenciaProducto}
+//SugerenciaProducto{nutrientesAdicionales(descripcion)} to SugNutrientesAdicionales{sugerenciaProducto}
+//}
+

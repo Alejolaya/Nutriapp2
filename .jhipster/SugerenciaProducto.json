@@ -1,0 +1,168 @@
+{
+    "name": "SugerenciaProducto",
+    "fields": [
+        {
+            "fieldName": "nombreAlimento",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tamanoPorcion",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "medidaCasera",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "valorEnergetico",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "caloriasGrasa",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "grasaTotal",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "grasaSaturada",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "grasaInsaturada",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "grasaTrans",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "colesterol",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "sodio",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "carbohidrato",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "fibraDietaria",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "fibraInsoluble",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "fibraSoluble",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "azucares",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "proteina",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "vitaminaA",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "vitaminaC",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "calcio",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "hierro",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "gluten",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "azucar",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "integral",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "fechaCreacion",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "fechaUltimaModificacion",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "estadoActivo",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "codigoDeBarras",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "imagen",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "observaciones",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "estadoSugerencia",
+            "fieldType": "EstadoSugerencia",
+            "fieldValues": "APROBADO,RECHAZADO,VALIDANDO"
+        },
+        {
+            "fieldName": "tags",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nombreMarca",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nombreCategoria",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descCategoria",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nutrientesAdicionales",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descUnidadMedida",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "valorUnidadMedida",
+            "fieldType": "Float"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190728162208",
+    "entityTableName": "sugerencia_producto",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

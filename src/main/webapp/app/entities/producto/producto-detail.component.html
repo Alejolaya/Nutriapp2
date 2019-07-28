@@ -1,0 +1,171 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="producto">
+            <h2><span jhiTranslate="nutriappApp.producto.detail.title">Producto</span> {{producto.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="nutriappApp.producto.nombreAlimento">Nombre Alimento</span></dt>
+                <dd>
+                    <span>{{producto.nombreAlimento}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.tamanoPorcion">Tamano Porcion</span></dt>
+                <dd>
+                    <span>{{producto.tamanoPorcion}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.medidaCasera">Medida Casera</span></dt>
+                <dd>
+                    <span>{{producto.medidaCasera}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.valorEnergetico">Valor Energetico</span></dt>
+                <dd>
+                    <span>{{producto.valorEnergetico}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.caloriasGrasa">Calorias Grasa</span></dt>
+                <dd>
+                    <span>{{producto.caloriasGrasa}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.grasaTotal">Grasa Total</span></dt>
+                <dd>
+                    <span>{{producto.grasaTotal}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.grasaSaturada">Grasa Saturada</span></dt>
+                <dd>
+                    <span>{{producto.grasaSaturada}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.grasaInsaturada">Grasa Insaturada</span></dt>
+                <dd>
+                    <span>{{producto.grasaInsaturada}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.grasaTrans">Grasa Trans</span></dt>
+                <dd>
+                    <span>{{producto.grasaTrans}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.colesterol">Colesterol</span></dt>
+                <dd>
+                    <span>{{producto.colesterol}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.sodio">Sodio</span></dt>
+                <dd>
+                    <span>{{producto.sodio}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.carbohidrato">Carbohidrato</span></dt>
+                <dd>
+                    <span>{{producto.carbohidrato}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.fibraDietaria">Fibra Dietaria</span></dt>
+                <dd>
+                    <span>{{producto.fibraDietaria}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.fibraInsoluble">Fibra Insoluble</span></dt>
+                <dd>
+                    <span>{{producto.fibraInsoluble}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.fibraSoluble">Fibra Soluble</span></dt>
+                <dd>
+                    <span>{{producto.fibraSoluble}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.azucares">Azucares</span></dt>
+                <dd>
+                    <span>{{producto.azucares}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.proteina">Proteina</span></dt>
+                <dd>
+                    <span>{{producto.proteina}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.vitaminaA">Vitamina A</span></dt>
+                <dd>
+                    <span>{{producto.vitaminaA}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.vitaminaC">Vitamina C</span></dt>
+                <dd>
+                    <span>{{producto.vitaminaC}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.calcio">Calcio</span></dt>
+                <dd>
+                    <span>{{producto.calcio}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.hierro">Hierro</span></dt>
+                <dd>
+                    <span>{{producto.hierro}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.gluten">Gluten</span></dt>
+                <dd>
+                    <span>{{producto.gluten}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.azucar">Azucar</span></dt>
+                <dd>
+                    <span>{{producto.azucar}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.integral">Integral</span></dt>
+                <dd>
+                    <span>{{producto.integral}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.fechaCreacion">Fecha Creacion</span></dt>
+                <dd>
+                    <span>{{producto.fechaCreacion}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.fechaUltimaModificacion">Fecha Ultima Modificacion</span></dt>
+                <dd>
+                    <span>{{producto.fechaUltimaModificacion}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.estadoActivo">Estado Activo</span></dt>
+                <dd>
+                    <span>{{producto.estadoActivo}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.codigoDeBarras">Codigo De Barras</span></dt>
+                <dd>
+                    <span>{{producto.codigoDeBarras}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.unidadPorcion">Unidad Porcion</span></dt>
+                <dd>
+                    <div *ngIf="producto.unidadPorcion">
+                        <a [routerLink]="['/unidad-medida', producto.unidadPorcion?.id, 'view']">{{producto.unidadPorcion?.abreviacion}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.unidadMedidaCasera">Unidad Medida Casera</span></dt>
+                <dd>
+                    <div *ngIf="producto.unidadMedidaCasera">
+                        <a [routerLink]="['/unidad-medida', producto.unidadMedidaCasera?.id, 'view']">{{producto.unidadMedidaCasera?.abreviacion}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.marca">Marca</span></dt>
+                <dd>
+                    <div *ngIf="producto.marca">
+                        <a [routerLink]="['/marca', producto.marca?.id, 'view']">{{producto.marca?.nombreMarca}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.categoria">Categoria</span></dt>
+                <dd>
+                    <div *ngIf="producto.categoria">
+                        <a [routerLink]="['/categoria', producto.categoria?.id, 'view']">{{producto.categoria?.nombreCategoria}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.tags">Tags</span></dt>
+                <dd>
+                    <span *ngFor="let tags of producto.tags; let last = last">
+                        <a [routerLink]="['/tags', tags?.id, 'view' ]">{{tags.descripcion}}</a>{{last ? '' : ', '}}
+                    </span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.producto.nutrientesAdicionales">Nutrientes Adicionales</span></dt>
+                <dd>
+                    <span *ngFor="let nutrientesAdicionales of producto.nutrientesAdicionales; let last = last">
+                        <a [routerLink]="['/nutrientes-adicionales', nutrientesAdicionales?.id, 'view' ]">{{nutrientesAdicionales.descripcion}}</a>{{last ? '' : ', '}}
+                    </span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/producto', producto.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,175 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="sugerenciaProducto">
+            <h2><span jhiTranslate="nutriappApp.sugerenciaProducto.detail.title">Sugerencia Producto</span> {{sugerenciaProducto.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.nombreAlimento">Nombre Alimento</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.nombreAlimento}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.tamanoPorcion">Tamano Porcion</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.tamanoPorcion}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.medidaCasera">Medida Casera</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.medidaCasera}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.valorEnergetico">Valor Energetico</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.valorEnergetico}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.caloriasGrasa">Calorias Grasa</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.caloriasGrasa}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.grasaTotal">Grasa Total</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.grasaTotal}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.grasaSaturada">Grasa Saturada</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.grasaSaturada}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.grasaInsaturada">Grasa Insaturada</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.grasaInsaturada}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.grasaTrans">Grasa Trans</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.grasaTrans}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.colesterol">Colesterol</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.colesterol}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.sodio">Sodio</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.sodio}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.carbohidrato">Carbohidrato</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.carbohidrato}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.fibraDietaria">Fibra Dietaria</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.fibraDietaria}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.fibraInsoluble">Fibra Insoluble</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.fibraInsoluble}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.fibraSoluble">Fibra Soluble</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.fibraSoluble}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.azucares">Azucares</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.azucares}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.proteina">Proteina</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.proteina}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.vitaminaA">Vitamina A</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.vitaminaA}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.vitaminaC">Vitamina C</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.vitaminaC}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.calcio">Calcio</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.calcio}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.hierro">Hierro</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.hierro}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.gluten">Gluten</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.gluten}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.azucar">Azucar</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.azucar}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.integral">Integral</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.integral}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.fechaCreacion">Fecha Creacion</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.fechaCreacion}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.fechaUltimaModificacion">Fecha Ultima Modificacion</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.fechaUltimaModificacion}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.estadoActivo">Estado Activo</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.estadoActivo}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.codigoDeBarras">Codigo De Barras</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.codigoDeBarras}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.imagen">Imagen</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.imagen}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.observaciones">Observaciones</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.observaciones}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.estadoSugerencia">Estado Sugerencia</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'nutriappApp.EstadoSugerencia.' + sugerenciaProducto.estadoSugerencia}}">{{sugerenciaProducto.estadoSugerencia}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.tags">Tags</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.tags}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.nombreMarca">Nombre Marca</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.nombreMarca}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.nombreCategoria">Nombre Categoria</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.nombreCategoria}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.descCategoria">Desc Categoria</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.descCategoria}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.nutrientesAdicionales">Nutrientes Adicionales</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.nutrientesAdicionales}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.descUnidadMedida">Desc Unidad Medida</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.descUnidadMedida}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.sugerenciaProducto.valorUnidadMedida">Valor Unidad Medida</span></dt>
+                <dd>
+                    <span>{{sugerenciaProducto.valorUnidadMedida}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/sugerencia-producto', sugerenciaProducto.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

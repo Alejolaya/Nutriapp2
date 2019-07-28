@@ -1,0 +1,35 @@
+{
+    "name": "UnidadMedida",
+    "fields": [
+        {
+            "fieldName": "abreviacion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "valorConversion",
+            "fieldType": "Float"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "tipoUnidadMedida",
+            "otherEntityRelationshipName": "unidadMedida",
+            "relationshipName": "unidadBase",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "changelogDate": "20190728162204",
+    "entityTableName": "unidad_medida",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

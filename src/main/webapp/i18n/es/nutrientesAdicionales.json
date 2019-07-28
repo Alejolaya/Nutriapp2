@@ -1,0 +1,25 @@
+{
+  "nutriappApp": {
+    "nutrientesAdicionales": {
+      "home": {
+        "title": "Nutrientes Adicionales",
+        "createLabel": "Crear nuevo Nutrientes Adicionales",
+        "createOrEditLabel": "Crear o editar Nutrientes Adicionales",
+        "notFound": "No Nutrientes Adicionales found"
+      },
+      "created": "Un nuevo Nutrientes Adicionales ha sido creado con el identificador {{ param }}",
+      "updated": "Un Nutrientes Adicionales ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Nutrientes Adicionales ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Nutrientes Adicionales {{ id }}?"
+      },
+      "detail": {
+        "title": "Nutrientes Adicionales"
+      },
+      "descripcion": "Descripcion",
+      "valor": "Valor",
+      "unidadPorcion": "Unidad Porcion",
+      "producto": "Producto"
+    }
+  }
+}

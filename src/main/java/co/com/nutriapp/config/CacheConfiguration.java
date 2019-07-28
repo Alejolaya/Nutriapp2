@@ -43,6 +43,18 @@ public class CacheConfiguration {
             createCache(cm, co.com.nutriapp.domain.User.class.getName());
             createCache(cm, co.com.nutriapp.domain.Authority.class.getName());
             createCache(cm, co.com.nutriapp.domain.User.class.getName() + ".authorities");
+            createCache(cm, co.com.nutriapp.domain.Producto.class.getName());
+            createCache(cm, co.com.nutriapp.domain.Producto.class.getName() + ".tags");
+            createCache(cm, co.com.nutriapp.domain.Producto.class.getName() + ".nutrientesAdicionales");
+            createCache(cm, co.com.nutriapp.domain.NutrientesAdicionales.class.getName());
+            createCache(cm, co.com.nutriapp.domain.NutrientesAdicionales.class.getName() + ".productos");
+            createCache(cm, co.com.nutriapp.domain.Tags.class.getName());
+            createCache(cm, co.com.nutriapp.domain.Tags.class.getName() + ".productos");
+            createCache(cm, co.com.nutriapp.domain.UnidadMedida.class.getName());
+            createCache(cm, co.com.nutriapp.domain.TipoUnidadMedida.class.getName());
+            createCache(cm, co.com.nutriapp.domain.Marca.class.getName());
+            createCache(cm, co.com.nutriapp.domain.Categoria.class.getName());
+            createCache(cm, co.com.nutriapp.domain.SugerenciaProducto.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

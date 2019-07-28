@@ -7,6 +7,14 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entidades",
+        "producto": "Producto",
+        "nutrientesAdicionales": "Nutrientes Adicionales",
+        "tags": "Tags",
+        "unidadMedida": "Unidad Medida",
+        "tipoUnidadMedida": "Tipo Unidad Medida",
+        "marca": "Marca",
+        "categoria": "Categoria",
+        "sugerenciaProducto": "Sugerencia Producto",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

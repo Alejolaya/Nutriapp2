@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="nutrientesAdicionales">
+            <h2><span jhiTranslate="nutriappApp.nutrientesAdicionales.detail.title">Nutrientes Adicionales</span> {{nutrientesAdicionales.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="nutriappApp.nutrientesAdicionales.descripcion">Descripcion</span></dt>
+                <dd>
+                    <span>{{nutrientesAdicionales.descripcion}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.nutrientesAdicionales.valor">Valor</span></dt>
+                <dd>
+                    <span>{{nutrientesAdicionales.valor}}</span>
+                </dd>
+                <dt><span jhiTranslate="nutriappApp.nutrientesAdicionales.unidadPorcion">Unidad Porcion</span></dt>
+                <dd>
+                    <div *ngIf="nutrientesAdicionales.unidadPorcion">
+                        <a [routerLink]="['/unidad-medida', nutrientesAdicionales.unidadPorcion?.id, 'view']">{{nutrientesAdicionales.unidadPorcion?.abreviacion}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/nutrientes-adicionales', nutrientesAdicionales.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

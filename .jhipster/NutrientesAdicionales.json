@@ -1,0 +1,39 @@
+{
+    "name": "NutrientesAdicionales",
+    "fields": [
+        {
+            "fieldName": "descripcion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "valor",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "unidadMedida",
+            "otherEntityRelationshipName": "nutrientesAdicionales",
+            "relationshipName": "unidadPorcion",
+            "otherEntityField": "abreviacion"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "producto",
+            "otherEntityRelationshipName": "nutrientesAdicionales",
+            "relationshipName": "producto",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20190728162202",
+    "entityTableName": "nutrientes_adicionales",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

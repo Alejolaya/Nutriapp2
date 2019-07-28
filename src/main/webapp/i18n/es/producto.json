@@ -1,0 +1,55 @@
+{
+  "nutriappApp": {
+    "producto": {
+      "home": {
+        "title": "Productos",
+        "createLabel": "Crear nuevo Producto",
+        "createOrEditLabel": "Crear o editar Producto",
+        "notFound": "No Producto found"
+      },
+      "created": "Un nuevo Producto ha sido creado con el identificador {{ param }}",
+      "updated": "Un Producto ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Producto ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Producto {{ id }}?"
+      },
+      "detail": {
+        "title": "Producto"
+      },
+      "nombreAlimento": "Nombre Alimento",
+      "tamanoPorcion": "Tamano Porcion",
+      "medidaCasera": "Medida Casera",
+      "valorEnergetico": "Valor Energetico",
+      "caloriasGrasa": "Calorias Grasa",
+      "grasaTotal": "Grasa Total",
+      "grasaSaturada": "Grasa Saturada",
+      "grasaInsaturada": "Grasa Insaturada",
+      "grasaTrans": "Grasa Trans",
+      "colesterol": "Colesterol",
+      "sodio": "Sodio",
+      "carbohidrato": "Carbohidrato",
+      "fibraDietaria": "Fibra Dietaria",
+      "fibraInsoluble": "Fibra Insoluble",
+      "fibraSoluble": "Fibra Soluble",
+      "azucares": "Azucares",
+      "proteina": "Proteina",
+      "vitaminaA": "Vitamina A",
+      "vitaminaC": "Vitamina C",
+      "calcio": "Calcio",
+      "hierro": "Hierro",
+      "gluten": "Gluten",
+      "azucar": "Azucar",
+      "integral": "Integral",
+      "fechaCreacion": "Fecha Creacion",
+      "fechaUltimaModificacion": "Fecha Ultima Modificacion",
+      "estadoActivo": "Estado Activo",
+      "codigoDeBarras": "Codigo De Barras",
+      "unidadPorcion": "Unidad Porcion",
+      "unidadMedidaCasera": "Unidad Medida Casera",
+      "marca": "Marca",
+      "categoria": "Categoria",
+      "tags": "Tags",
+      "nutrientesAdicionales": "Nutrientes Adicionales"
+    }
+  }
+}
